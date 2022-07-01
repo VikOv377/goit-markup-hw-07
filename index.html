@@ -20,31 +20,33 @@
 <!--Шапка сайта-->
     
     <header class="header">
-        <div class="container main-nav">
-            <a class="link-logo header-logo" href="./index.html" lang="en">Web<span class="logo-black">Studio</span></a>
+        <div class="container menu">
+            <a class="logo header__logo" href="./index.html" lang="en">Web<span class="logo--black">Studio</span></a>
             
-            <nav class="header-nav">
-            <ul class="list header-list-nav">
-                <li class="header-list-item"><a href="./index.html" class="link current">Студия</a></li>
-                <li class="header-list-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-                <li class="header-list-item"><a href="./contacts.html" class="link">Контакты</a></li>
+            <nav class="nav">
+            <ul class="list nav__list">
+                <li class="nav__item"><a href="./index.html" class="link nav--current">Студия</a></li>
+                <li class="nav__item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                <li class="nav__item"><a href="./contacts.html" class="link">Контакты</a></li>
             </ul>
             </nav>
         
-            <ul class="contacts list">
-                <li class="contacts-list-item">
-                    <a class="link contacts-link" href="mailto:info@devstudio.com">
-                        <svg class="header-icon" width="16" height="12">
+            <ul class="list contacts">
+                <li class="contacts__item">
+                    <a class="link contacts__link" href="mailto:info@devstudio.com">
+                        <svg class="contacts__icon" width="16" height="12">
                             <use href="./images/icons.svg#envelope"></use>
                         </svg>info@devstudio.com
-                    </a></li>
-                <li class="contacts-list-item">
-                    <a class="link contacts-link" href="tel:+380961111111"><svg class="header-icon" width="10" height="16">
+                    </a>
+                </li>
+                <li class="contacts__item">
+                    <a class="link contacts__link" href="tel:+380961111111"><svg class="contacts__icon" width="10" height="16">
                         <use href="./images/icons.svg#smartphone"></use>
                     </svg>
                         +38 096 111 11 11
-                    </a></li>
-        </ul>
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -55,7 +57,7 @@
 <!--Секция "Начальная"-->
     
       <section class="hero">
-          <h1 class="hero-title-h1 white-text">Эффективные решения для вашего бизнеса</h1>
+          <h1 class="hero__title hero__title--white">Эффективные решения для вашего бизнеса</h1>
           <button class="button" type="button" data-modal-open>Заказать услугу</button>
       </section>
     
@@ -63,9 +65,9 @@
       
       <section class="about-us section">
           <div class="container">
-          <h2 class="section-title-h2 visually-hidden">О нас</h2>
-          <ul class="list about-us-list card-set">
-              <li class="about-us-list-item card-item">
+          <h2 class="section__title visually-hidden">О нас</h2>
+          <ul class="list about-us__list card-set">
+              <li class="about-us__item card-item">
                   <div class="about-us-label">
                       <svg width="70" height="70">
                           <use href="./images/icons.svg#antenna"></use>
@@ -74,7 +76,7 @@
                   <h3 class="about-us-header item-title">Внимание к деталям</h3>
                   <p class="about-us-description">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
               </li>
-              <li class="about-us-list-item card-item">
+              <li class="about-us__item card-item">
                 <div class="about-us-label">
                     <svg width="70" height="70">
                         <use href="./images/icons.svg#clock"></use>
@@ -83,7 +85,7 @@
                 <h3 class="about-us-header item-title">Пунктуальность</h3>
                 <p class="about-us-description">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
               </li>
-              <li class="about-us-list-item card-item">
+              <li class="about-us__item card-item">
                 <div class="about-us-label">
                     <svg width="70" height="70">
                         <use href="./images/icons.svg#diagram"></use>
@@ -92,7 +94,7 @@
                 <h3 class="about-us-header item-title">Планирование</h3>
                 <p class="about-us-description">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
               </li>
-              <li class="about-us-list-item card-item">
+              <li class="about-us__item card-item">
                 <div class="about-us-label">
                     <svg width="70" height="70">
                         <use href="./images/icons.svg#astronaut"></use>
@@ -109,7 +111,7 @@
       
     <section class="what-we-do section">
           <div class="container">
-          <h2 class="section-title-h2">Чем мы занимаемся</h2>
+          <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="list what-we-do-list card-set">
               
               <li class="what-we-do-item card-item">
@@ -146,7 +148,7 @@
       
       <section class="our-team section">
           <div class="container">
-          <h2 class="section-title-h2">Наша команда</h2>
+          <h2 class="section__title">Наша команда</h2>
           <ul class="list our-team-list card-set">
              <li class="our-team-item card-item">
                 <img class="our-team-image" src="./images/product-designer.jpg" alt="Дизайнер продукта" width="270" height="260">
@@ -334,7 +336,7 @@
 
        <section class="regular-clients section">
         <div class="container">
-            <h2 class="section-title-h2">Постоянные клиенты</h2>
+            <h2 class="section__title">Постоянные клиенты</h2>
             
             <ul class="regular-clients-list list card-set">
                 <li class="regular-clients-item card-item">
@@ -400,7 +402,7 @@
     <footer class="footer">
         <div class="container footer-sections">
           <div class="footer-part">
-            <a class="link-logo footer-logo" href="./index.html" lang="en">Web<span class="logo-white">Studio</span></a>
+            <a class="logo footer__logo" href="./index.html" lang="en">Web<span class="logo-white">Studio</span></a>
         <address class="adress">
             <ul class="list footer-adress-list">
                 <li class="footer-adress-item"><a class="link address-link" href="https://goo.gl/maps/qPpEZcLFMpQjQpn4A" target="_blank" rel="noreferrer nofollow noopener">г. Киев, пр-т Леси Украинки, 26</a></li>
