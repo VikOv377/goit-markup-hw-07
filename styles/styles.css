@@ -14,7 +14,7 @@
     --card-gap-top: 30px;
     --card-gap-left: 30px;
     --team-social-icons: #AFB1B8;
-    --card-item: 4;
+    --card__item: 4;
     --transitions-time: 250ms;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --delay: 0ms;
@@ -32,10 +32,6 @@ body {
 .link {
     text-decoration: none;
     color: inherit;
-}
-
-.hero__title--white {
-    color: var(--white-text-color);
 }
 
 h1,
@@ -78,7 +74,7 @@ img {
     padding-bottom: 94px;
 }
 
-.card-set {
+.card__set {
     display: flex;
     flex-wrap: wrap;
     
@@ -88,11 +84,44 @@ img {
     /*Возможно использовать свойство gap вместо варианта с вычитанием марджинов: gap: var(--card-gap-left);*/
 }
 
-.card-item {
+.card__item {
     margin-left: var(--card-gap-left);
     margin-top: var(--card-gap-top);
     
-    width: calc(100% / var(--card-item) - var(--card-gap-left))  ;
+    width: calc(100% / var(--card__item) - var(--card-gap-left))  ;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--white-text-color);
+    min-width: 200px;
+
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+    padding: 10px 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: background-color var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--color-accent-hover);
 }
 
 /* --------------------PAGE "MAIN"--------------------- */
@@ -267,38 +296,11 @@ img {
     margin: 0 auto 30px;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
+.hero__title--white {
     color: var(--white-text-color);
-    min-width: 200px;
-
-    background-color: var(--blue-color);
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-   
-    padding: 10px 32px;
-    margin-left: auto;
-    margin-right: auto;
-
-    transition: background-color var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.button:hover,
-.button:focus {
-    background-color: var(--color-accent-hover);
-}
+
 /* Секция "О нас" */
 
 .section__title {
@@ -322,12 +324,12 @@ img {
     overflow: hidden;
 }
 
-.about-us-header {
+.about-us__header {
     color: var(--black-text-color);
     margin-bottom: 10px;
 }
 
-.item-title {
+.item__title {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
@@ -338,7 +340,7 @@ img {
     /*Формула для использования со свойством gap: width: calc((100% - 3*var(--card-gap-left)) / 4);*/
 }
 
-.about-us-label {
+.about-us__label {
     background-color: var(--color-our-team-section);
     border-radius: 4px;
     padding: 25px;
@@ -355,17 +357,17 @@ img {
     padding-top: 0;
 }
 
-.what-we-do-list {
-    --card-item: 3;
+.what-we-do__list {
+    --card__item: 3;
 }
 
-.what-we-do-thumb {
+.what-we-do__thumb {
     position: relative;
 
     display: flex;
 }
 
-.what-we-do-overlay {
+.what-we-do__overlay {
     position: absolute;
     
     display: flex;
@@ -381,7 +383,7 @@ img {
     background-color: rgba(47, 48, 58, 0.8);;
 }
 
-.what-we-do-description { 
+.what-we-do__description { 
     position: absolute;
 
     text-align: center;
@@ -395,7 +397,7 @@ img {
     width: auto;
 }
 
-.our-team-item {
+.our-team-list__item {
     background-color: var(--white-text-color);
     box-shadow: 
     0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -404,39 +406,39 @@ img {
     border-radius: 0px 0px 4px 4px;
 }
 
-.our-team-job, .our-team-name {
+.team-member-description__job, .team-member-description__name {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
 
-.our-team-name {
+.team-member-description__name {
     font-weight: 500;
     color: var(--black-text-color);
 
     margin-bottom: 10px;
 }
 
-.our-team-job {
+.team-member-description__job {
     margin-bottom: 16px;
 }
 
-.our-team-align {
+.team-member-description {
     padding: 30px 32px;
 }
 
-.our-team-image {
+.our-team-list__image {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.our-team-social-list {
+.social-networks {
     justify-content: center;
     --card-gap-left: 10px;
     --card-gap-top: 10px;
 }
 
-.our-team-social-link {
+.social-networks__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -450,28 +452,28 @@ img {
     background-color var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.footer .our-team-social-link {
+.footer .social-networks__link {
     background: rgba(255, 255, 255, 0.1);
     color: var(--white-text-color)
 }
 
-.our-team-social-link:hover,
-.our-team-social-link:focus {
+.social-networks__link:hover,
+.social-networks__link:focus {
     background-color: var(--blue-color);
     color: var(--white-text-color);
 }
 
-.our-team-social-icon {
+.social-networks__icon {
     fill: currentColor;
 }
 
 /* Секция "Постоянные клиенты" */
 
-.regular-clients-list {
-    --card-item: 6;
+.clients-list {
+    --card__item: 6;
 }
 
-.regular-clients-link {
+.clients-list__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -486,13 +488,13 @@ img {
     border var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.regular-clients-link:hover,
-.regular-clients-link:focus {
+.clients-list__link:hover,
+.clients-list__link:focus {
     color: var(--color-hover);
     border: 1px solid var(--color-hover);
 }
 
-.clients-icon {
+.clients-list__icon {
     fill: currentColor;
 }
 
@@ -505,20 +507,20 @@ img {
     padding-bottom: 60px;
 }
 
-.footer-part:not(:last-child) {
+.footer-column:not(:last-child) {
     margin-right: 70px;
 }
 
-.logo-white {
+.logo--white {
     color: var(--white-text-color);
 }
 
-.address-link {
+.footer-adress-list__link {
     color: rgba(255, 255, 255, 0.6);
 
     transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
-.address-link[target="_blank"] {
+.footer-adress-list__link[target="_blank"] {
     color: var(--white-text-color);
 }
 
@@ -528,8 +530,8 @@ img {
     margin-right: 0;
 }
 
-.address-link:hover,
-.address-link:focus {
+.footer-adress-list__link:hover,
+.footer-adress-list__link:focus {
     color: var(--color-hover);
 }
 
@@ -539,30 +541,26 @@ img {
     margin-bottom: 20px;
 }
 
-.footer-adress-list .footer-adress-item:not(:last-child) {
+.footer-adress-list .footer-adress-list__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.footer-header {
+.footer-column__header {
     color: var(--white-text-color);
     margin-bottom: 20px;
 }
 
-.footer-sections {
+.footer-container {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-}
-
-.footer-social-icon {
-    fill: currentColor;
 }
 
 .subscribe {
     display: flex;
 }
 
-.email-input {
+.subscribe__email-input {
     width: 358px;
     height: 50px;
     
@@ -585,8 +583,8 @@ img {
     border-color var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.email-input:hover,
-.email-input:focus {
+.subscribe__email-input:hover,
+.subscribe__email-input:focus {
     border-color: var(--color-hover);
 }
 
@@ -597,7 +595,7 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.subscibe-icon {
+.subscibe__icon {
     margin-left: 10px;
 }
 
@@ -682,7 +680,7 @@ img {
 }
 
 .our-projects-list-item {
-   --card-item: 3;
+   --card__item: 3;
 }
 
 .project-link {
@@ -810,7 +808,7 @@ img {
     opacity var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.close-button-modal {
+.modal_close-button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -831,12 +829,12 @@ img {
     transition: fill var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.close-button-modal:hover, 
-.close-button-modal:focus {
+.modal_close-button:hover, 
+.modal_close-button:focus {
     fill: var(--color-hover);
 }
 
-.modal-header {
+.modal_header {
     display: block;
 
     font-weight: 700;
@@ -851,7 +849,7 @@ img {
     margin-right: auto;
 }
 
-.modal-form {
+.communication-form {
     margin-left: auto;
     margin-right: auto;
 }
