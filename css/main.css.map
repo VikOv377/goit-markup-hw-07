@@ -3,7 +3,7 @@
     "mappings": "AACA,GAAG",
     "sources": [
         "../sass/main.scss",
-        "../sass/utils/_vars.scss"
+        "../sass/utils/_variables.scss"
     ],
     "names": [],
     "file": "main.css"
