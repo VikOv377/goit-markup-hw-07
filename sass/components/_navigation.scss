@@ -1,0 +1,54 @@
+.nav .link:hover,
+.nav .link:focus {
+    color: var(--color-hover);
+}
+
+.nav .nav--current {
+    color: var(--color-hover);
+
+    position: relative;
+}
+
+.nav {
+    color: var(--black-text-color);
+}
+
+.nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+.nav .nav--current::after {
+    display: block;
+
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-hover);
+    border-radius: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    transform: scaleX(0);
+
+    transition:
+        transform var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+.nav .nav--current:hover::after,
+.nav .nav--current:focus::after {
+    transform: scaleX(1);
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__list .nav__item:not(:last-child) {
+    margin-right: 50px;
+}
