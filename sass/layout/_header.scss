@@ -6,7 +6,8 @@
 
 .menu {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 
@@ -14,19 +15,19 @@
     display: flex;
     margin-left: auto;
     justify-content: center;
+
+    .link:hover,
+    .link:focus {
+        color: var(--color-hover);
+    }
+
+    .link {
+        transition: color var(--transitions-time) var(--timing-function) var(--delay);
+}
 }
 
-.contacts .contacts__item+.contacts__item {
+.contacts .contacts__item + .contacts__item {
     margin-left: 50px;
-}
-
-.contacts .link:hover,
-.contacts .link:focus {
-    color: var(--color-hover);
-}
-
-.contacts .link {
-    transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
 
 .contacts__link {

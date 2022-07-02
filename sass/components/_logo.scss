@@ -9,12 +9,17 @@
 
     padding-top: 24px;
     padding-bottom: 25px;
+    
+    &--black {
+        color: var(--black-text-color);
+    }
+
+    &--white {
+        color: var(--white-text-color);
+    }
 }
 
 .header__logo {
     margin-right: 93px;
 }
 
-.logo--black {
-    color: var(--black-text-color);
-}

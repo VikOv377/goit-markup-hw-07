@@ -24,9 +24,9 @@
     margin-right: auto;
 
     transition: background-color var(--transitions-time) var(--timing-function) var(--delay);
-}
 
-.button:hover,
-.button:focus {
+    &:hover,
+    &:focus {
     background-color: var(--color-accent-hover);
+    }
 }

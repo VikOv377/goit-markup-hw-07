@@ -25,8 +25,9 @@
 
     max-width: 696px;
     margin: 0 auto 30px;
-}
 
-.hero__title--white {
+
+    &--white {
     color: var(--white-text-color);
 }
+ }

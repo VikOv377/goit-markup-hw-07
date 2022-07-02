@@ -15,12 +15,12 @@
 
     transition: color var(--transitions-time) var(--timing-function) var(--delay),
         border var(--transitions-time) var(--timing-function) var(--delay);
-}
 
-.clients-list__link:hover,
-.clients-list__link:focus {
-    color: var(--color-hover);
-    border: 1px solid var(--color-hover);
+    &:hover,
+    &:focus {
+        color: var(--color-hover);
+        border: 1px solid var(--color-hover);
+    }
 }
 
 .clients-list__icon {

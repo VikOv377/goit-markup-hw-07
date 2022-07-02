@@ -21,12 +21,12 @@
 
     transition: color var(--transitions-time) var(--timing-function) var(--delay),
         background-color var(--transitions-time) var(--timing-function) var(--delay);
-}
 
-.social-networks__link:hover,
-.social-networks__link:focus {
-    background-color: var(--blue-color);
-    color: var(--white-text-color);
+    &:hover,
+    &:focus {
+        background-color: var(--blue-color);
+        color: var(--white-text-color);
+    }
 }
 
 .social-networks__icon {
