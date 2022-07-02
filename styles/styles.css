@@ -336,10 +336,6 @@ img {
     text-transform: uppercase;
 }
 
-.about-us__item {
-    /*Формула для использования со свойством gap: width: calc((100% - 3*var(--card-gap-left)) / 4);*/
-}
-
 .about-us__label {
     background-color: var(--color-our-team-section);
     border-radius: 4px;
@@ -617,7 +613,7 @@ img {
     background-color: var(--white-text-color);
 }
 
-.button-radio {
+.choice__button-radio {
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -649,12 +645,12 @@ img {
     margin-bottom: var(--gap-after-h2);
 }
 
-.choice .choice-item + .choice-item {
+.choice .choice__item + .choice__item {
     margin-left: 8px;
 }
 
-.button-radio:hover,
-.button-radio:focus {
+.choice__button-radio:hover,
+.choice__button-radio:focus {
     color: var(--white-text-color);
     background-color: var(--color-hover);
     box-shadow: 
@@ -664,12 +660,12 @@ img {
     border-radius: 4px;
 }
 
-.button-radio.nav--current {
+.choice__button-radio.nav--current {
     background-color: var(--color-hover);
     color: var(--white-text-color);
 }
 
-.project-name {
+.about-project__name {
     font-weight: 700;
     font-size: 18px;
     line-height: 2.00;
@@ -679,31 +675,31 @@ img {
     margin-bottom: 4px;
 }
 
-.our-projects-list-item {
+.projects-list__item {
    --card__item: 3;
 }
 
-.project-link {
+.projects-list__link {
     display: flex;
     flex-direction: column;
 
     transition: box-shadow var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.project-link:hover,
-.project-link:focus {
+.projects-list__link:hover,
+.projects-list__link:focus {
     box-shadow: 
     0px 1px 10px rgba(0, 0, 0, 0.30),
     0px 4px 10px rgba(0, 0, 0, 0.30),
     1px 4px 10px rgba(0, 0, 0, 0.30);
 }
 
-.project-category {
+.about-project__category {
     font-size: 16px;
     line-height: 1.88;
 }
 
-.projects-align {
+.about-project {
     padding: 20px 24px;
 
     border-bottom: 1px solid var(--color-of-portfolio-box);
@@ -711,14 +707,14 @@ img {
     border-right: 1px solid var(--color-of-portfolio-box);
 }
 
-.projects-thumb {
+.projects-list__thumb {
     position: relative;
     overflow: hidden;
     
     display: flex;
 }
 
-.projects-overlay {
+.project-overlay {
     position: absolute;
     
     width: 100%;
@@ -732,7 +728,7 @@ img {
     transform var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.our-project-text {
+.project-overlay__text {
     position: absolute;
     display: inline-block;
        
@@ -748,8 +744,8 @@ img {
     color: var(--white-text-color);
 }
 
-.project-link:hover .projects-overlay,
-.project-link:focus .projects-overlay {
+.projects-list__link:hover .project-overlay,
+.projects-list__link:focus .project-overlay {
     transform: translateY(0);
 }
 
@@ -808,7 +804,7 @@ img {
     opacity var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.modal_close-button {
+.modal__close-button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -829,12 +825,12 @@ img {
     transition: fill var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.modal_close-button:hover, 
-.modal_close-button:focus {
+.modal__close-button:hover, 
+.modal__close-button:focus {
     fill: var(--color-hover);
 }
 
-.modal_header {
+.modal__header {
     display: block;
 
     font-weight: 700;
@@ -845,11 +841,6 @@ img {
     color: var(--black-text-color);
 
     margin-bottom: 12px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.communication-form {
     margin-left: auto;
     margin-right: auto;
 }
@@ -870,22 +861,22 @@ textarea {
     box-shadow var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.form-field {
+.communication-form__whole-field {
     display: flex;
     flex-direction: column;
     
     transition: fill var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.form-field:not(:last-child) {
+.communication-form__whole-field:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.form-wrapper {
+.communication-form__wrapper {
     margin-bottom: 20px;
 }
 
-.form-input {
+.communication-form__input {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -903,7 +894,7 @@ textarea {
     box-shadow var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.form-field .form-label:not(:last-child) {
+.communication-form__whole-field .communication-form__label:not(:last-child) {
     margin-bottom: 4px;
     
     font-weight: 400;
@@ -912,7 +903,7 @@ textarea {
     letter-spacing: 0.01em;
 }
 
-.form-field textarea::placeholder {
+.communication-form__whole-field textarea::placeholder {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.14;
@@ -920,11 +911,11 @@ textarea {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.input-wrap {
+.communication-form__input-wrap {
     position: relative;
 }
 
-.modal-icon {
+.communication-form__icon {
     position: absolute;
 
     top: 50%;
@@ -932,13 +923,13 @@ textarea {
     transform: translateY(-50%);
 }
 
-.form-field:hover,
-.form-field:focus-within {
+.communication-form__whole-field:hover,
+.communication-form__whole-field:focus-within {
     fill: var(--color-hover);
 }
 
-.form-input:hover,
-.form-input:focus-within,
+.communication-form__input:hover,
+.communication-form__input:focus-within,
 textarea:hover,
 textarea:focus {
     border-color: var(--color-hover);
@@ -948,7 +939,7 @@ textarea:focus {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 
-.form-agreement {
+.modal__agreement {
     margin-bottom: 30px;
 
     display: flex;
@@ -956,7 +947,7 @@ textarea:focus {
     align-items: center;
 }
 
-.agreement-text {
+.modal__agreement-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -964,13 +955,13 @@ textarea:focus {
     cursor: pointer;
 }
 
-.agreement-link {
+.modal__agreement-link {
     color: var(--blue-color);
     border-bottom: 1px solid currentColor;
     line-height: 1.0;
 }
 
-.agreement-text::before {
+.modal__agreement-text::before {
     content: '';
 
     display: block;
@@ -987,8 +978,8 @@ textarea:focus {
     border var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.checkbox:checked + .agreement-text::before,
-.checkbox:focus:checked + .agreement-text::before {
+.modal__checkbox:checked + .modal__agreement-text::before,
+.modal__checkbox:focus:checked + .modal__agreement-text::before {
     background-color: var(--color-hover);
     background-image: url('../images/icon-check.svg');
     background-position: center;
@@ -997,11 +988,11 @@ textarea:focus {
     background-origin: content-box;
 }
 
-.checkbox:focus + .agreement-text::before {
+.modal__checkbox:focus + .modal__agreement-text::before {
     border: 2px solid var(--color-hover);
 }
 
-.checkbox:hover + .agreement-text::before {
+.modal__checkbox:hover + .modal__agreement-text::before {
     border: 2px solid var(--color-hover);
 }
 

@@ -482,63 +482,63 @@
       
         <div class="modal">
          
-          <button type="button" class="modal_close-button" data-modal-close>
+          <button type="button" class="modal__close-button" data-modal-close>
             <svg width="11" height="11">
                 <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
           
-          <b class="modal_header">Оставьте свои данные, мы вам перезвоним</b>
+          <b class="modal__header">Оставьте свои данные, мы вам перезвоним</b>
 
           <form class="communication-form" autocomplete="on">
             
-            <div class="form-wrapper">
+            <div class="communication-form__wrapper">
             
-              <div class="form-field">
-              <label class="form-label" for="name">Имя</label>
-              <div class="input-wrap">
-              <input class="form-input" type="text" name="name" id="name" required />
-              <svg class="modal-icon" width="18" height="18">
+              <div class="communication-form__whole-field">
+              <label class="communication-form__label" for="name">Имя</label>
+              <div class="communication-form__input-wrap">
+              <input class="communication-form__input" type="text" name="name" id="name" required />
+              <svg class="communication-form__icon" width="18" height="18">
                   <use href="./images/icons.svg#icon-name-modal"></use>
               </svg>
               </div>
               </div>
             
-              <div class="form-field">
-              <label class="form-label" for="tel">Телефон</label>
-              <div class="input-wrap">
-              <input class="form-input" type="tel" name="tel" id="tel" required />
-              <svg class="modal-icon" width="18" height="18">
+              <div class="communication-form__whole-field">
+              <label class="communication-form__label" for="tel">Телефон</label>
+              <div class="communication-form__input-wrap">
+              <input class="communication-form__input" type="tel" name="tel" id="tel" required />
+              <svg class="communication-form__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone-modal"></use>
               </svg>
               </div>
               </div>
 
-              <div class="form-field">
-              <label class="form-label" for="mail">Почта</label>
-              <div class="input-wrap">
-              <input class="form-input" type="email" name="mail" id="mail" required />
-              <svg class="modal-icon" width="18" height="18">
+              <div class="communication-form__whole-field">
+              <label class="communication-form__label" for="mail">Почта</label>
+              <div class="communication-form__input-wrap">
+              <input class="communication-form__input" type="email" name="mail" id="mail" required />
+              <svg class="communication-form__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-mail-modal"></use>
               </svg>
               </div>
               </div>
 
-              <div class="form-field">
-              <label class="form-label" for="comments">Комментарий</label>
+              <div class="communication-form__whole-field">
+              <label class="communication-form__label" for="comments">Комментарий</label>
               <textarea name="comments" id="comments" rows="10" placeholder="Введите текст"></textarea>
               </div>
             
             </div>
             
-            <div class="form-agreement">
-                 <input type="checkbox" name="agree" value="agree" id="agree" class="checkbox visually-hidden" />
-                 <label for="agree" class="agreement-text">
-                  Соглашаюсь с рассылкой и принимаю&nbsp;<a href="./terms.html" class="link agreement-link">Условия договора</a>
+            <div class="modal__agreement">
+                 <input type="checkbox" name="agree" value="agree" id="agree" class="modal__checkbox visually-hidden" />
+                 <label for="agree" class="modal__agreement-text">
+                  Соглашаюсь с рассылкой и принимаю&nbsp;<a href="./terms.html" class="link modal__agreement-link">Условия договора</a>
                 </label>
             </div>
 
-            <button class="button form-submit" type="submit">Отправить</button>
+            <button class="button" type="submit">Отправить</button>
           </form>
       </div>
     </div>
