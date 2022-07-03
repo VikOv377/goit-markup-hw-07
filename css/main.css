@@ -379,12 +379,12 @@ textarea:focus {
   color: var(--color-hover);
 }
 
-.nav .nav--current {
+.nav--current {
   color: var(--color-hover);
   position: relative;
 }
 
-.nav .nav--current::after {
+.nav--current::after {
   display: block;
   content: '';
   width: 100%;
@@ -398,8 +398,7 @@ textarea:focus {
   transition: transform var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.nav .nav--current:hover::after,
-.nav .nav--current:focus::after {
+.nav--current:hover::after, .nav--current:focus::after {
   transform: scaleX(1);
 }
 
@@ -407,7 +406,7 @@ textarea:focus {
   display: flex;
 }
 
-.nav__list .nav__item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
