@@ -16,23 +16,25 @@
     margin-left: auto;
     justify-content: center;
 
-    .link:hover,
-    .link:focus {
+    @extend %link:hover,
+    @extend %link:focus {
         color: var(--color-hover);
     }
 
     .link {
         transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
-}
 
-.contacts .contacts__item + .contacts__item {
-    margin-left: 50px;
+    .contacts__item + .contacts__item {
+        margin-left: 50px;
+    }
 }
 
 .contacts__link {
-    display: flex;
-    align-items: center;
+    @extend %link;
+    
+    @include centeredFlex(flex);
+    
     padding-top: 32px;
     padding-bottom: 32px;
 }

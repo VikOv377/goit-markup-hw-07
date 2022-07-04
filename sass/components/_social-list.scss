@@ -10,9 +10,7 @@
 }
 
 .social-networks__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex();
 
     color: var(--team-social-icons);
     width: 44px;

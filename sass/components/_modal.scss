@@ -23,13 +23,11 @@
 }
 
 .modal__close-button {
+    @include centeredFlex();
+
     position: absolute;
     top: 8px;
     right: 8px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     width: 30px;
     height: 30px;
@@ -165,17 +163,13 @@ textarea:focus {
 }
 
 .modal__agreement {
-    margin-bottom: 30px;
+    @include centeredFlex();
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 30px;
 }
 
 .modal__agreement-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex();
 
     cursor: pointer;
 
