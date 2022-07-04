@@ -11,3 +11,7 @@
 
     @include centeredFlex();
 }
+
+.about-us__svg {
+    animation: appear 10s linear infinite;
+}

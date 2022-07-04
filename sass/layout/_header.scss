@@ -16,12 +16,12 @@
     margin-left: auto;
     justify-content: center;
 
-    @extend %link:hover,
-    @extend %link:focus {
+    %link:hover,
+    %link:focus {
         color: var(--color-hover);
     }
 
-    .link {
+    %link {
         transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
 

@@ -55,7 +55,7 @@ img {
   overflow: hidden;
 }
 
-.contacts, .contacts__link {
+.contacts__link {
   text-decoration: none;
   color: inherit;
 }
@@ -265,12 +265,12 @@ body {
   justify-content: center;
 }
 
-.contacts :hover,
-.contacts .link:focus {
+.contacts .contacts__link:hover,
+.contacts .contacts__link:focus {
   color: var(--color-hover);
 }
 
-.contacts .link {
+.contacts .contacts__link {
   transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
 

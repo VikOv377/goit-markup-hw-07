@@ -55,9 +55,20 @@ img {
   overflow: hidden;
 }
 
-.contacts, .contacts__link {
+.contacts__link {
   text-decoration: none;
   color: inherit;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
 }
 
 body {
@@ -465,12 +476,12 @@ textarea:focus {
   justify-content: center;
 }
 
-.contacts :hover,
-.contacts .link:focus {
+.contacts .contacts__link:hover,
+.contacts .contacts__link:focus {
   color: var(--color-hover);
 }
 
-.contacts .link {
+.contacts .contacts__link {
   transition: color var(--transitions-time) var(--timing-function) var(--delay);
 }
 
@@ -534,6 +545,10 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about-us__svg {
+  animation: appear 10s linear infinite;
 }
 
 .what-we-do {
